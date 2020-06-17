@@ -1,0 +1,25 @@
+{
+  "name": "ts-demo",
+  "version": "1.0.0",
+  "description": "ts practise",
+  "main": "index.js",
+  "scripts": {
+    "test": "test index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinMaKai/ts_demo.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "kevinmakai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KevinMaKai/ts_demo/issues"
+  },
+  "homepage": "https://github.com/KevinMaKai/ts_demo#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.3.38"
+  }
+}
