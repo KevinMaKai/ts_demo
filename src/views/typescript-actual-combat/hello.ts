@@ -47,3 +47,10 @@ function fun(name:string){
   setTimeout (function(){
     fun('Tom');
   },1000);//参数是函数名
+
+
+  enum Days{ Sun =<any>"S",Mon =2 , Tue= 4,Wed,Thu,Fri,Sat};
+  console.log(Days["Sun"] === <any>"S"); //true
+  console.log(Days["Mon"] === 2); //true
+  console.log(Days["Tue"] === 4); //true
+  console.log(Days["S"]); //Sun

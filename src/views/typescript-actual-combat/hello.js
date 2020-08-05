@@ -3,7 +3,7 @@
  * @Description: 第一个ts程序
  * @Author: jeffreymakai
  * @Date: 2020-07-17 01:08:30
- * @LastEditTime: 2020-07-21 01:08:04
+ * @LastEditTime: 2020-07-19 20:20:11
  * @LastEditors: jeffreymakai
  */
 // import s = require("./string_template");
@@ -34,59 +34,24 @@ document.body.innerHTML = helloWorld(msg);
 //     (currentValue, index, array) => currentValue + index + array.length
 //   )); // [5, 7, , 10]
 // document.body.innerHTML = [1,2,3,4].map1(i=>i+1);
-// function test(name) {
-//     alert('hello' + ' ' + name);
-// }
-// let testName='assistant'
-// setTimeout(function () {
-//     test(testName);
-// }, 1000); //参数是函数名
-// setTimeout('test(testName)',1000);
-
-
-// const tasks = [];
-
-// const output = (i) => new Promise((resolve) => {
-//     setTimeout(() => {
-//         console.log(i);
-//         resolve();
-//     }, 1000 * i);
-
-// });
-
-// //生成全部的异步操作
-// for (var i = 0; i < 5; i++) {
-//     tasks.push(output(i));
-// }
-// //同步操作完成后，输出最后的i
-// Promise.all(tasks).then(() => {
-//     console.log(i);
-// })
-
-// var len=4;
-// while(len--){
-// 　　var time=setTimeout(function(){
-// 　　　　console.log(len); 
-// 　　},0); 
-// };
-// console.log(time);
-// var sss1 = function(value1,value2){
-    
-//     　　　　console.log(value1+"+"+value2);
-    
-//     　　　　console.log(value1+value2)};
-//     function sss2  (value1,value2){
-    
-//         　　　　console.log(value1+"+"+value2);
-        
-//         　　　　console.log(value1+value2)};
-// setTimeout( sss2, 2000,2,3)
-// let param = 'Jack';
-// setTimeout('test(param)',1000);
-// function test(name) {
-//     console.log('hello' + ' ' + name);
-// }
-// let testName='assistant'
-// setTimeout( 
-//     test 
-//  , 1000); //可以获取到外层参数
+function fun(name) {
+    alert('hello' + ' ' + name);
+}
+setTimeout(function () {
+    fun('Tom');
+}, 1000); //参数是函数名
+var Days;
+(function (Days) {
+    Days[Days["Sun"] = "S"] = "Sun";
+    Days[Days["Mon"] = 2] = "Mon";
+    Days[Days["Tue"] = 4] = "Tue";
+    Days[Days["Wed"] = 5] = "Wed";
+    Days[Days["Thu"] = 6] = "Thu";
+    Days[Days["Fri"] = 7] = "Fri";
+    Days[Days["Sat"] = 8] = "Sat";
+})(Days || (Days = {}));
+;
+console.log(Days["Sun"] === "S"); //true
+console.log(Days["Mon"] === 2); //true
+console.log(Days["Tue"] === 4); //true
+console.log(Days["S"]); //Sun
