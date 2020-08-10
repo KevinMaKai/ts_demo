@@ -3,7 +3,7 @@
  * @Description: 第一个ts程序
  * @Author: jeffreymakai
  * @Date: 2020-07-17 01:08:30
- * @LastEditTime: 2020-07-21 01:08:04
+ * @LastEditTime: 2020-08-09 11:27:42
  * @LastEditors: jeffreymakai
  */
 // import s = require("./string_template");
@@ -34,59 +34,79 @@ document.body.innerHTML = helloWorld(msg);
 //     (currentValue, index, array) => currentValue + index + array.length
 //   )); // [5, 7, , 10]
 // document.body.innerHTML = [1,2,3,4].map1(i=>i+1);
-// function test(name) {
-//     alert('hello' + ' ' + name);
-// }
-// let testName='assistant'
-// setTimeout(function () {
-//     test(testName);
-// }, 1000); //参数是函数名
-// setTimeout('test(testName)',1000);
-
-
-// const tasks = [];
-
-// const output = (i) => new Promise((resolve) => {
-//     setTimeout(() => {
-//         console.log(i);
-//         resolve();
-//     }, 1000 * i);
-
-// });
-
-// //生成全部的异步操作
-// for (var i = 0; i < 5; i++) {
-//     tasks.push(output(i));
-// }
-// //同步操作完成后，输出最后的i
-// Promise.all(tasks).then(() => {
-//     console.log(i);
-// })
-
-// var len=4;
-// while(len--){
-// 　　var time=setTimeout(function(){
-// 　　　　console.log(len); 
-// 　　},0); 
-// };
-// console.log(time);
-// var sss1 = function(value1,value2){
-    
-//     　　　　console.log(value1+"+"+value2);
-    
-//     　　　　console.log(value1+value2)};
-//     function sss2  (value1,value2){
-    
-//         　　　　console.log(value1+"+"+value2);
-        
-//         　　　　console.log(value1+value2)};
-// setTimeout( sss2, 2000,2,3)
-// let param = 'Jack';
-// setTimeout('test(param)',1000);
-// function test(name) {
-//     console.log('hello' + ' ' + name);
-// }
-// let testName='assistant'
-// setTimeout( 
-//     test 
-//  , 1000); //可以获取到外层参数
+function fun(name) {
+    alert('hello' + ' ' + name);
+}
+setTimeout(function () {
+    fun('Tom');
+}, 1000); //参数是函数名
+function timeout(ms) {
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, ms, 'done');
+    });
+}
+timeout(2000).then((value) => {
+    console.log(value);
+});
+let promise = new Promise(function (resolve, reject) {
+    console.log('Promise');
+    resolve();
+});
+promise.then(function () {
+    console.log('resolved.');
+});
+console.log('Hi!');
+let s;
+s = 'seven';
+s = 7;
+// s.getName();
+let uv = null;
+// let uv2: null = undefined;
+// let uv3: null =2;
+let a = 3;
+uv = a;
+console.log(a);
+let b1;
+//返回never的函数
+function error(message) {
+    throw new Error(message);
+}
+//推断返回值类型为never
+function fail() {
+    return error("Something failed");
+}
+//返回never的函数必须存在无法结束
+function infiniteLoop() {
+    while (true) {
+    }
+}
+let s1 = Symbol('name');
+let s2 = Symbol('age');
+console.log(s1); //Symbol(name)
+console.log(s2); //Symbol(age)
+console.log(s1.toString()); // "Symbol(name)"
+console.log(s2.toString()); // "Symbol(age)"
+let s3 = Symbol();
+let s4 = Symbol();
+console.log(s1 === s2); // false;
+let s5 = Symbol('age');
+let s6 = Symbol('age');
+console.log(s5 === s6); // false;
+let sym = Symbol("name");
+let sym2 = Symbol("name");
+let obj = {
+    [sym]: "value",
+    [sym2]: "value2",
+    name: "value3"
+};
+console.log(obj);
+/**
+ * Object
+ *    name: "value3"
+ *    Symbol: "value"
+ *    Symbol: "value2"
+ */
+// console.log(obj[sym]);
+let s31 = Symbol('age');
+// let s41 = s31+"是symbol";
+// console.log(s41);
