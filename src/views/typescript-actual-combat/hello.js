@@ -3,7 +3,11 @@
  * @Description: 第一个ts程序
  * @Author: jeffreymakai
  * @Date: 2020-07-17 01:08:30
- * @LastEditTime: 2020-08-09 11:27:42
+<<<<<<< HEAD
+ * @LastEditTime: 2020-08-10 09:14:11
+=======
+ * @LastEditTime: 2020-07-19 20:20:11
+>>>>>>> 033e33a1a9768fd540fec2e6647df2d83e010ac6
  * @LastEditors: jeffreymakai
  */
 // import s = require("./string_template");
@@ -110,3 +114,18 @@ console.log(obj);
 let s31 = Symbol('age');
 // let s41 = s31+"是symbol";
 // console.log(s41);
+var Days;
+(function (Days) {
+    Days[Days["Sun"] = "S"] = "Sun";
+    Days[Days["Mon"] = 2] = "Mon";
+    Days[Days["Tue"] = 4] = "Tue";
+    Days[Days["Wed"] = 5] = "Wed";
+    Days[Days["Thu"] = 6] = "Thu";
+    Days[Days["Fri"] = 7] = "Fri";
+    Days[Days["Sat"] = 8] = "Sat";
+})(Days || (Days = {}));
+;
+console.log(Days["Sun"] === "S"); //true
+console.log(Days["Mon"] === 2); //true
+console.log(Days["Tue"] === 4); //true
+console.log(Days["S"]); //Sun
