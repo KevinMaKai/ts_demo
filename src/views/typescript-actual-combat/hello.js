@@ -3,11 +3,7 @@
  * @Description: 第一个ts程序
  * @Author: jeffreymakai
  * @Date: 2020-07-17 01:08:30
-<<<<<<< HEAD
- * @LastEditTime: 2020-08-10 09:14:11
-=======
- * @LastEditTime: 2020-07-19 20:20:11
->>>>>>> 033e33a1a9768fd540fec2e6647df2d83e010ac6
+ * @LastEditTime: 2020-08-09 11:27:42
  * @LastEditors: jeffreymakai
  */
 // import s = require("./string_template");
